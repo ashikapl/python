@@ -30,3 +30,6 @@ sr = ['a','b','c','d','e','f']
 srs = pd.Series(sr)
 print(srs)
 print(type(srs))
+
+# access the element
+print("Element from the series:",srs[1])
