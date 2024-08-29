@@ -13,3 +13,9 @@ student_data = {'Name':['Mohit','Rohit','Raghav','Prabhav','Tanay'],'Age':[12,14
 s = pd.DataFrame(student_data)
 s.to_csv("Student.csv", index = False)
 
+MissData = {'Name':['Nikhil','Kamlesh','Mohan','deepak','hitesh','Rahul','Harish'],
+            'Branch':['COE','COE','IT','MCE','naN','naN','naN'],
+            'Year':['2022','2020','2012','2021','2024','2023','2024'],
+            'CGPA':['9.7','9.1','9.4','9.5','9.0','9.1','9.2',]}
+m = pd.DataFrame(MissData)
+m.to_csv("MissData.csv", index=False)
