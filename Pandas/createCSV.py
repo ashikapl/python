@@ -20,3 +20,13 @@ MissData = {'Name':['Nikhil','Kamlesh','Mohan','Deepak','Hitesh','NaN','Harish']
 m = pd.DataFrame(MissData)
 m.to_csv("MissData.csv", index=False)
 print(m)
+
+# csv file for replaceing and interpolate
+Data = {'S.No':[1,2,3,4,5,6,7,8,9,10],
+        'Name':['Aashvi','Chaheti','Komal','Kusum','Kanak','Kanika','Lakshita','Niharika','vishaka','Tannu'],
+        'Weight':[50,45,60,66,55,80,77],
+        'Blood':['AB+','A+','B+','A+','A-','AB-','O+','AB+','O-','AB+'],
+        'Date':['1/8/2024','2/8/2024','3/8/2024','4/8/2024','5/8/2024','6/8/2024','7/8/2024','8/8/2024','9/8/2024','10/8/2024',]}
+d = pd.DataFrame(Data)
+d.to_csv("Data.csv", index=False)
+print(d)

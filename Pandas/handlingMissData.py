@@ -21,7 +21,9 @@ print(var.dropna(subset=["CGPA"]))
 print('\n')
 
 # inplace that gives a new data which has no NaN value if(True)
-print("InPlace:\n", var.dropna(inplace=True))# (Remove in original data) # all the col has NaN value so empty data
+print(var)
+var.dropna(inplace=True)# (Remove in original data) # all the col has NaN value so empty data
+print(var)
 print('\n')
 
 # thresh which remove the NaN value row as the given parameter
@@ -45,5 +47,7 @@ print('\n')
 
 print(var.fillna("Rama",limit=1)) # it put col wise val if each col 1st value change if limit = 1
 print('\n') 
-print(var.fillna(5,inplace=False))# put 5 at all the NaN value(change in original Data in file)
+print(var)
+var.fillna(5,inplace=False)# put 5 at all the NaN value(change in original Data in file)
+print(var)
 print('\n') 
