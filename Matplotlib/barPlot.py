@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 a = ['Python','C++','Java','Js']
 b = [87,70,60,82]
-c = [20,30,40,50]
+# c = [20,30,40,50]
 
 
 l1 = plt.xlabel('Language',fontsize=15)
@@ -15,7 +15,13 @@ c = ['b','g','r','y']
 # linestyle is for dotted or simple line around the plots
 # we can use center also in align parameter to keep the (a) list point at center
 width=0.5
-x = plt.bar(a,b,width, color='r', edgecolor = 'black', label="Popularity")
-x = plt.bar(a,c,width, color='b', edgecolor = 'green', label="Popularity1")
+x = plt.bar(a,b,width, color='brown', edgecolor = 'black', label="Popularity")
+# x = plt.bar(a,c,width, color='b', edgecolor = 'green', label="Popularity1")
 plt.legend()
+plt.show()
+
+x = ['A','B','C','D','E']
+y = [22,23,43,34,25]
+
+plt.barh(x,y,height=0.2) # btwn (0-1)
 plt.show()
