@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 a = ['Python','C++','Java','Js']
 b = [87,70,60,82]
@@ -22,6 +23,11 @@ plt.show()
 
 x = ['A','B','C','D','E']
 y = [22,23,43,34,25]
+z = [12,13,24,18,22]
 
-plt.barh(x,y,height=0.2) # btwn (0-1)
+ypos = np.arange(len(x))
+# here by sub and add 0.2  with ypos to separate them
+plt.barh(ypos-0.2,y,height=0.4, label='Revenue') # btwn (0-1)
+plt.barh(ypos+0.2,z,height=0.4, label='Profit')
+plt.legend() # here legend is used for label showing 
 plt.show()
