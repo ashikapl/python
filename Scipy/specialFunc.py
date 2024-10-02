@@ -19,3 +19,13 @@ print("Combinations:-", special.comb(10,3))#(N,k)
 # k is no. of objects being picked (Order matter)
 print("Permuataion:-", special.perm(20,4)) # (N,k)
 print("Permuataion:-", special.perm(6,4)) # (N,k)
+
+# logsumexpo: compute the log of sum of exponenial of input element
+# input: [x1,x2,x3,x4]
+# output: loge((e**x1)+(e**x2)+(e**x3)+(e**x4))
+print("logsumExpo:-",special.logsumexp([1,2,3,4]))
+
+# Lambert w function
+# Defind as the inverse of x*(e^x)
+# W(z) is such that z = W(z)*(e^W(z)) where z is a complex number
+print("W(5):-",special.lambertw(5))
