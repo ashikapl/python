@@ -18,7 +18,7 @@ print()
 arr = np.array(
     [[1,2,3],
      [4,5,6],
-     [7,8,9]]
+     [8,8,9]]
 )
 
 print("Printing the Array")
@@ -28,3 +28,13 @@ print()
 # Finding Determinant
 determinant = linalg.det(arr)
 print("Determinant:-", determinant)
+print()
+
+# Finding Inverse of matrix
+inverse_arr = linalg.inv(arr)
+print("Inverse of matrix:-")
+print(inverse_arr)
+print()
+print("Matrix - Inverse Product")
+print(arr @ inverse_arr) # here we can use @ in matrix multiplication
+print()
