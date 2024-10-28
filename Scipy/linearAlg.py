@@ -38,3 +38,12 @@ print()
 print("Matrix - Inverse Product")
 print(arr @ inverse_arr) # here we can use @ in matrix multiplication
 print()
+
+# eigenValue and eigenVector
+array2 = np.array([[0,1,2],[3,4,5],[5,6,7]])
+
+egn_val, egn_vec = linalg.eig(array2)
+print(egn_val)
+print(egn_vec)
+
+# more 
