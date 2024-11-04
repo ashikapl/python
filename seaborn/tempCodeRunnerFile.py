@@ -1,2 +1,2 @@
 
-# sns.lineplot(x="bill_length_mm",y="bill_depth_mm",data=y_1)
+#             order=order_1,hue_order=["Male",'Female'], errorbar=('ci', 50))
