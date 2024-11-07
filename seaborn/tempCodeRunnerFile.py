@@ -1,4 +1,3 @@
-magma",
-#             linewidth=2,linecolor="brown",gap=0.2,saturation=0.9,
-#             order=["Sun","Thur","Fri","Sat"],showmeans=True,
-#             meanprops={"marker":"*","markeredgecolor":"black"})
+ex",hue="day",palette="cool")
+# fg.map(plt.bar,"total_bill","tip",edgecolor="black").add_legend()
+# plt.show()
