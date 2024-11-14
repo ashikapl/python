@@ -71,7 +71,6 @@ plt.xticks(fontsize=5)
 plt.title("Count-State")
 plt.show()
 
-print()
 print("ACCORDING TO STATE WISE")
 print("Note:-> From the above graph we can see that most of the patient are from Kerala.")
 print()
@@ -98,7 +97,6 @@ plt.xticks(rotation=45, fontsize=8)  # Rotate x-axis labels by 45 degrees for be
 plt.title("State wise Deaths")
 plt.show()
 
-print()
 print("ACCORDING TO STATE WISE DEATHS")
 print("Note:-> From the above graph we can see that most of the deaths from Maharashtra.")
 print()
@@ -115,31 +113,56 @@ print("ACCORDING TO STATE WISE CDM(CURED/DISCHARGED/MIGRATED)")
 print("Note:-> From the above graph we can see that most the CDM people from Maharashtra.")
 print()
 
+data = df.head(200)
+
 # print(new_df.columns)
 # Now we have to compare old test cases and new cases trends
-# sns.lineplot(x="Name of State / UT", y="Total confirmed cases",data=new_df)
-# sns.lineplot(x="Name of State / UT", y="New cases", data=new_df)
+sns.lineplot(x="Name of State / UT", y="Total Confirmed cases",markers="o", data=data, label="Old Cases")
+sns.lineplot(x="Name of State / UT", y="New cases", markers="o", data=data, label="New Cases")
 
-# plt.title("Trends over old and new cases")
-# plt.show()
-# print(new_df.info())
+plt.xticks(fontsize=7, rotation=45)
+plt.title("Trend comparison between Old-Cases and New-Cases")
+plt.show()
+
+print("ACCORDING TO THE COMPARE GRAPH BETWEEN OLD AND NEW CASES")
+print("""Note:-> From the comparison graph between old and new COVID-19 cases, it is evident that the number of cases 
+        is decreasing, indicating that the virus is spreading less than before.""")
+print()
 
 # Trends btwn old and new deaths according to state wise
-# plt.figure(figsize=(10, 6))
-data = df.head(200)
 sns.lineplot(x="Name of State / UT", y="Death", marker='o', data=data, label="Death")
 sns.lineplot(x="Name of State / UT", y="New deaths", marker='o', data=data, label="New deaths")
 
 plt.xticks(fontsize=8, rotation=45)
-plt.title("Trend Comparison between Death and New Death")
+plt.title("Trend comparison between Old-Death and New-Death")
 plt.xlabel("State")
 plt.ylabel("Count")
-# plt.legend()
 plt.show()
 
-melted_df = df.melt(id_vars="Name of State / UT", value_vars=["Death","New deaths"], var_name="new", value_name="Count").head(200)
-sns.barplot(x="Name of State / UT", y="Count", hue="new", data=melted_df)
+print("ACCORDING TO THE COMPARE GRAPH BEWTEEN OLD AND NEW DEATHS")
+print("""Note:-> From the comparison graph between old and new COVID-19 deaths, it is evident that the number 
+        of deaths is decreasing and the patients are recovering more.""")
+print()
+
+# print(new_df.columns)
+ 
+sns.lineplot(x="Name of State / UT", y="Cured/Discharged/Migrated", markers="o", data=data, label="Old Recovery(CDM)")
+sns.lineplot(x="Name of State / UT", y="New recovered", markers="o", data=data, label="New Recovery")
 
 plt.xticks(fontsize=8, rotation=45)
-plt.title("Compare between Death and New Death")
+plt.title("Trend comparison between CDM and New-Recovery")
+plt.xlabel("State")
+plt.ylabel("Count")
 plt.show()
+
+print("ACCORDING TO THE COMPARE GRAPH BETWEEN OLD AND NEW RECOVERY(CDM)")
+print("""Note:-> From the comparison graph between old and new COVID-19 recoveries, it is evident that the number 
+        of patients are recovering more than the previous recoveries.""")
+print()
+
+print("""CONCLUSION:- After analyzing the dataset, we observed that most patients are from Kerala, while the highest number of 
+             cases is from Maharashtra. Additionally, most patients who were discharged or migrated are from Maharashtra. 
+             By comparing old and new test cases, as well as deaths and recoveries, we can assume that there is increasing 
+             control over COVID-19.""")
+print()
+
