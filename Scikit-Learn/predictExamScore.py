@@ -1,4 +1,4 @@
-# Predict the student's final exam score based on the number of hours they study
+# Predict the student's final exam score based on the number of hours they study -> Using Linear Regression
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split # its for split the data into two parts training and test
