@@ -1,12 +1,5 @@
-
-# X = iris.data
-# y = iris.target
-
-# feature_names = iris.feature_names
-# target_names = iris.target_names
-
-# print("Feature Name:-", feature_names)
-# print("Target_Name:-",target_names)
-
-# print(type(X))
-# print(X[:5])
+plt.scatter(df['Annual_Income'], df['Spending_Score'], c=df['Cluster'],cmap='rainbow')
+plt.title('kMeans Clustering Annual_Income Vs Spending_Score')
+plt.xlabel('Annual_Income')
+plt.ylabel('Spending_Score')
+plt.show()
